@@ -1,5 +1,15 @@
 name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+
+#Validation
+
+while True:
+    age_input = input("Enter your age: ")
+    if age_input.isdigit():
+        age = int(age_input)
+        break
+    else:
+        print("Please enter a valid number for age.")
+
 quantity = int(input("How many tickets do you want? "))
 
 #ticket and type with price
@@ -16,7 +26,7 @@ else:
     total_cost = ticket_price * quantity
     
     # Receipt Display
-print("\n=== Movie Ticket Reciept ===")
+print("\n=== Movie Ticket Receiept ===")
 print(f"Customer: {name}")
 print(f"Ticket type: {ticket_type} (${ticket_price:.2f} each)")
 print(f"Quantity: {quantity}")
